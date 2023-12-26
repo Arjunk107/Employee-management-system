@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+
+    &__heading {
+        color: #da0000;
+        font-size: 40px;
+    }
+}

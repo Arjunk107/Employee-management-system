@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="container__forms">
+        <form class="container__forms__form" (ngSubmit)="leavereg(myleave,leaveform)" #myleave="ngForm">
+            <div class="form-group row">
+                <label for="leavetype" class="col-sm-2 col-form-label" style="width: 30%;">Type of Leave</label>
+                <div class="col-sm-10" style="width: 70%;">
+                    <select id="leavetype" class="form-control" required [(ngModel)]="leaveform.leavetype"
+                        #leavetype="ngModel" name="leavetype">
+                        <option selected>Choose...</option>
+                        <option value="Earned Leave">Earned Leave</option>
+                        <option value="Casual Leave">Casual Leave</option>
+                        <option value="Sick Leave">Sick Leave</option>
+                        <option value="Leave Without Pay">Leave Without Pay </option>
+                        <option value="Marriage Leave">Marriage Leave</option>
+                        <option value="Paternity Leave">Paternity Leave</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form container__forms__dates">
+                <div class="form-group col-md-6" style="width: 40%;">
+                    <label for="startdate">Start Date</label>
+                    <input type="date" class="form-control" id="startdate" name="startdate" required
+                        [(ngModel)]="leaveform.startdate" #startdate="ngModel">
+                </div>
+                <div class="form-group col-md-6" style="width: 40%;">
+                    <label for="enddate">End Date</label>
+                    <input type="date" class="form-control" id="enddate" name="enddate" required
+                        [(ngModel)]="leaveform.enddate" #enddate="ngModel" min="{{currentdate | date:'yyyy-mm-dd'}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="reason" class="col-sm-2 col-form-label" style="width: 30%;">Reason</label>
+                <div class="col-sm-10" style="width: 70%;">
+                    <input type="text" class="form-control" id="reason" placeholder="Reason for leave" name="reason"
+                        required [(ngModel)]="leaveform.reason" #reason="ngModel">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

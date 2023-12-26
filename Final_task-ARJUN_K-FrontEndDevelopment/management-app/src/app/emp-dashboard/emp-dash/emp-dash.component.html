@@ -1,0 +1,46 @@
+<div class="dashcontainer container">
+    <div class="dashcontainer__hrinfo">
+        <h2 class="dashcontainer__h2">HR Information</h2>
+        <ul>
+            <li>
+                <p>Make your emails easily scannable</p>
+            </li>
+            <li>
+                <p>Complement your HR email templates with an internal SMS system</p>
+            </li>
+            <li>
+                <p>Send your email to relevant recipients only</p>
+            </li>
+            <li>
+                <p>Schedule your HR emails at the right time</p>
+            </li>
+            <li>
+                <p>MEnsure that your CTA is clear</p>
+            </li>
+            <li>
+                <p>Use an engaging subject line</p>
+            </li>
+        </ul>
+    </div>
+    <div class="dashcontainer__leavedet">
+        <h2 class="dashcontainer__h2">Leave Application details</h2>
+        <div class="leavecard" *ngFor="let leavedeta of empleavedetails">
+            <div class="card dashcontainer__leavedet__card" *ngIf="this.leavedeta.empname == this.empdetails.empname">
+                <div class="card-body dashcontainer__leavedet__cardbody">
+                    <div class="content">
+                        <p class="card-text">{{leavedeta.reason}}</p>
+                        <p class="card-text">
+                            <span class="leavecards__dates">start date : </span>{{leavedeta.startdate}}&nbsp;<span
+                                class="leavecards__dates">End
+                                Date:</span>
+                            {{leavedeta.enddate}}
+                        </p>
+                    </div>
+                    <div class="status">
+                        <h3>Status:{{leavedeta.status}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

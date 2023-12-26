@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+    <div class="main">
+        <div class="main__sidebars">
+            <div class="main__sidebars__sidebar">
+                <div class="main__sidebars__sidebar__buttons">
+                    <ul class="main__sidebars__sidebar__navs">
+                        <li>
+                            <a class="main__sidebars__sidebar__nav-item" routerLinkActive="active" (click)="home()">
+                                <i class="bi bi-house-fill"></i>
+                                <span class="main__sidebars__sidebar__nav-item__title">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main__sidebars__sidebar__nav-item" [routerLink]="['viewemplys']"
+                                routerLinkActive="active" (click)="viewemppage()">
+                                <i class="bi bi-eye-fill"></i>
+                                <span class="main__sidebars__sidebar__nav-item__title">View employees</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main__sidebars__sidebar__nav-item" [routerLink]="['addemplys']"
+                                routerLinkActive="active" (click)="addemppage()">
+                                <i class="bi bi-person-fill-add"></i>
+                                <span class="main__sidebars__sidebar__nav-item__title">add employees</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main__content" *ngIf="currentpage == 'hrhome'">
+            <div class="main__content__graphs">
+                <div class="main__content__graphs__doughnut">
+                    <app-doughnut-chart></app-doughnut-chart>
+                </div>
+                <div class="main__content__graphs__bar">
+                    <app-barchart></app-barchart>
+                </div>
+            </div>
+            <div class="main__content__leavereq">
+                <h2>Leave Request</h2>
+                <div class="main__content__leavereq__content">
+                    <app-leave-req></app-leave-req>
+                </div>
+            </div>
+        </div>
+        <div class="main__content" *ngIf="currentpage == 'addemppage'">
+            <div class="addempform">
+                <app-add-employees></app-add-employees>
+            </div>
+        </div>
+        <div class="main__content" *ngIf="currentpage == 'viewemppage'">
+            <div class="emptable">
+                <app-view-employees></app-view-employees>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

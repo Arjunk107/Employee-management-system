@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+    <div class="main">
+        <div class="main__sidebars">
+            <div class="sidebar">
+                <div class="sidebar__buttons">
+                    <ul class="sidebar__navs">
+                        <li>
+                            <a class=" sidebar__nav-item" [routerLink]="['dash']" routerLinkActive="active"
+                                (click)="inDash()">
+                                <i class="bi bi-house-fill"></i>
+                                <span class="sidebar__nav-item__title">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" sidebar__nav-item" [routerLink]="['leave']" routerLinkActive="active"
+                                (click)="inLeave()">
+                                <i class="bi bi-calendar-check-fill"></i>
+                                <span class="sidebar__nav-item__title">Leave Application</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main__content" *ngIf="!pageval">
+            <app-emp-dash></app-emp-dash>
+        </div>
+        <div class="main__content" *ngIf="pageval">
+            <app-emp-leave></app-emp-leave>
+        </div>
+    </div>
+
+</body>
+
+</html>

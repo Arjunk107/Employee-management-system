@@ -1,0 +1,24 @@
+<div class="leavecards" *ngFor="let leavedeta of leavedetails">
+    <div class="card" *ngIf="leavedeta.status=='pending'">
+        <div class="card-body leavecards__cardbody">
+            <div class="content">
+                <h5 class="leavecards__cardbody__h5">{{leavedeta.empname}}</h5>
+                <p class="card-text">{{leavedeta.reason}}</p>
+                <p class="card-text">
+                    <span class="leavecards__dates">start date : </span>{{leavedeta.startdate}}&nbsp;<span
+                        class="leavecards__dates">End
+                        Date:</span>
+                    {{leavedeta.enddate}}
+                </p>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn btn-outline-success" (click)="approve(leavedeta.id)"><i
+                        class="bi bi-check-lg"></i>
+                    Approve</button>&nbsp;
+                <button type="button" class="btn btn-outline-danger" (click)="reject(leavedeta.id)"><i
+                        class="bi bi-x-lg"></i>
+                    Reject</button>
+            </div>
+        </div>
+    </div>
+</div>

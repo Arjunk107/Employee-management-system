@@ -1,0 +1,198 @@
+{
+  "employee": [
+    {
+      "id": 1011,
+      "empname": "Aravind Chandran",
+      "empdob": "1988-02-15",
+      "empgender": "male",
+      "empphnumber": 8099786547,
+      "empemail": "aravindchandran@gmail.com",
+      "emppassword": "Aravind@123",
+      "emprole": "Frontend developer"
+    },
+    {
+      "id": 1012,
+      "empname": "Mathew Immanuel",
+      "emprole": "Backend developer",
+      "empdob": "1989-06-14",
+      "empgender": "male",
+      "empphnumber": 9088795467,
+      "empemail": "mathewimmaual@gmail.com",
+      "emppassword": "Mathew@321"
+    },
+    {
+      "id": 1013,
+      "empname": "David Luka",
+      "emprole": "Deveops Engineer",
+      "empdob": "1985-02-05",
+      "empgender": "male",
+      "empphnumber": 9656453413,
+      "empemail": "davidaluka@gmail.com",
+      "emppassword": "David@123"
+    },
+    {
+      "id": 1014,
+      "empname": "Marvi Neymar",
+      "emprole": "Frontend developer",
+      "empdob": "1993-09-15",
+      "empgender": "female",
+      "empphnumber": 8089710369,
+      "empemail": "marvineymar@gmail.com",
+      "emppassword": "Marvi@123"
+    },
+    {
+      "id": 1015,
+      "empname": "Sreya Mukhesh",
+      "emprole": "Backend developer",
+      "empdob": "1996-07-17",
+      "empgender": "female",
+      "empphnumber": 9088790435,
+      "empemail": "sreya@gmail.com",
+      "emppassword": "Sreya@1234"
+    },
+    {
+      "id": 1016,
+      "empname": "theigo messi",
+      "emprole": "Backend developer",
+      "empdob": "1997-06-10",
+      "empgender": "male",
+      "empphnumber": 9867564323,
+      "empemail": "theigomessi@gmail.com",
+      "emppassword": "Leomessi@321"
+    },
+    {
+      "id": 1017,
+      "empname": "karthika suresh",
+      "emprole": "Deveops Engineer",
+      "empdob": "1995-01-08",
+      "empgender": "female",
+      "empphnumber": 9045123145,
+      "empemail": "karthikasuresh@gmail.com",
+      "emppassword": "Karthika@123"
+    },
+    {
+      "id": 1018,
+      "empname": "adrian luna",
+      "emprole": "Frontend developer",
+      "empdob": "1994-08-19",
+      "empgender": "male",
+      "empphnumber": 9765894356,
+      "empemail": "adrianluna@gmail.com",
+      "emppassword": "Adrianluna@369"
+    }
+  ],
+  "hr": [
+    {
+      "id": "101",
+      "hrname": "Hari Shankar",
+      "hremail": "harishankar123@gmail.com",
+      "hrdob": "10/06/1982",
+      "hrpassword": "Harishankar@123"
+    },
+    {
+      "id": "102",
+      "hrname": "David Beckham",
+      "hremail": "david90@gmail.com",
+      "hrdob": "29/01/1991",
+      "hrpassword": "David$1991"
+    },
+    {
+      "id": "103",
+      "hrname": "Anjana Krishnan",
+      "hremail": "anjanakrishnan100@gmail.com",
+      "hrdob": "24/09/1997",
+      "hrpassword": "anjanakrishnan@100"
+    },
+    {
+      "id": "104",
+      "hrname": "Vidhya lakshmi",
+      "hremail": "vidhylakshmi8129@gmail.com",
+      "hrdob": "17/05/1989",
+      "hrpassword": "vidhylakshmi@8129"
+    }
+  ],
+  "employeeLeave": [
+    {
+      "id": 1003,
+      "empname": "Mathew",
+      "type": "Earned Leave",
+      "startdate": "2023-12-12",
+      "enddate": "2023-12-14",
+      "nodays": "2",
+      "reason": "cxvxcvfdgd",
+      "status": "approved"
+    },
+    {
+      "id": 1004,
+      "empname": "Mathew Immanuel",
+      "startdate": "2023-12-19",
+      "enddate": "2023-12-23",
+      "reason": "Fever",
+      "status": "approved"
+    },
+    {
+      "id": 1005,
+      "empname": "Mathew Immanuel",
+      "leavetype": "Casual Leave",
+      "startdate": "2023-12-25",
+      "enddate": "2023-12-26",
+      "nodays": 1,
+      "reason": "Collecting certificates from institute",
+      "status": "pending"
+    },
+    {
+      "id": 1006,
+      "empname": "Sreya Mukhesh",
+      "leavetype": "Sick Leave",
+      "startdate": "2023-12-21",
+      "enddate": "2023-12-22",
+      "nodays": 1,
+      "reason": "Cold and fever",
+      "status": "pending"
+    },
+    {
+      "id": 1007,
+      "empname": "karthika suresh",
+      "leavetype": "Sick Leave",
+      "startdate": "2023-12-11",
+      "enddate": "2023-12-14",
+      "nodays": 3,
+      "reason": "cold and Headache ",
+      "status": "pending"
+    }
+  ],
+  "activeemp": [
+    {
+      "id": "1011",
+      "status": "inactive"
+    },
+    {
+      "id": "1012",
+      "status": "inactive"
+    },
+    {
+      "id": "1013",
+      "status": "inactive"
+    },
+    {
+      "id": "1014",
+      "status": "inactive"
+    },
+    {
+      "id": "1015",
+      "status": "inactive"
+    },
+    {
+      "id": "1016",
+      "status": "inactive"
+    },
+    {
+      "id": "1017",
+      "status": "inactive"
+    },
+    {
+      "id": "1018",
+      "status": "inactive"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Inconsolata:wght@300&family=Inter:wght@200&family=Poppins:wght@300&family=Roboto&family=Share+Tech+Mono&display=swap');
+
+.user {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        transition: all 0.2s;
+    }
+}
+
+
+
+.app-navbar {
+    background-color: hsl(220.2, 74.6%, 26.3%);
+
+    &__name {
+        font-size: 25px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        transition: all 0.5s;
+    }
+
+    &__role {
+        margin-bottom: 0px;
+        font-size: 23px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.4)
+    }
+
+
+}
+
+.user:hover .user__img {
+
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.app-navbar__name:hover {
+    font-size: 27px;
+}

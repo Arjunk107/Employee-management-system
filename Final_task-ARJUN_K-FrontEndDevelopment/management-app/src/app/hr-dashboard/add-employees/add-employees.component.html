@@ -1,0 +1,93 @@
+<div class="container">
+    <h2>Employee Registration</h2>
+    <div class="container__container-forms">
+        <form (ngSubmit)="addEmp(empform,EmpregForm)" #empform="ngForm" class="container__form">
+            <div class="form-group">
+                <label for="empname">Employee Name</label>
+                <input type="text" class="form-control" id="empname" name="empname" required
+                    [(ngModel)]="EmpregForm.empname" #empname="ngModel" placeholder="Name of Employee" minlength="3"
+                    [pattern]="namePattern" maxlength="30">
+                <div *ngIf="empname.errors && empname.touched">
+                    <small *ngIf="empname.errors['minlength']" class="container__error__msg">Enter the character more
+                        than
+                        8</small>
+                    <small *ngIf="empname.errors['pattern']" class="container__error__msg">Enter the Name</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="emprole">Employee Role</label>
+                <select class="form-control" name="emprole" id="emprole" placeholder="Enter role of Employee"
+                    [(ngModel)]="EmpregForm.emprole" #emprole="ngModel">
+                    <option selected>Choose...</option>
+                    <option value="Frontend developer">FrontEnd Developer</option>
+                    <option value="Backend developer">BackEnd Developer</option>
+                    <option value="Deveops Engineer">Deveops Engineer</option>
+                </select>
+            </div>
+            <div class="container__form__dobs">
+
+                <div class="form-group" style="width: 49%;">
+                    <label for="empdob">Date of Birth</label>
+                    <input type="date" class="form-control" id="empdob" name="empdob" required
+                        [(ngModel)]="EmpregForm.empdob" #empdob="ngModel">
+                    <div *ngIf="empdob.errors && empdob.touched">
+                        <small *ngIf="empdob.errors['required']" class="container__error__msg">Enter the Date of
+                            Birth</small>
+                    </div>
+                </div>
+                <div class="form-group" style="width: 49%;">
+                    <label for="empgender">Gender</label>
+                    <select id="empgender" class="form-control" name="empgender" required
+                        [(ngModel)]="EmpregForm.empgender" #empgender="ngModel">
+                        <option selected>Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div *ngIf="empgender.errors && empgender.touched">
+                        <small *ngIf="empgender.errors['required']" class="container__error__msg">Select your
+                            Gender</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="empphnumber">Phone Number</label>
+                <input type="number" id="empphnumber" class="form-control" id="empphnumber" name="empphnumber" required
+                    [(ngModel)]="EmpregForm.empphnumber" #empphnumber="ngModel" [pattern]="mobNumberPattern"
+                    placeholder="Enter the phone number">
+                <div *ngIf="empphnumber.errors && empphnumber.touched">
+                    <small *ngIf="empphnumber.errors['required']" class="container__error__msg">Enter the Phone Number
+                    </small>
+                    <small *ngIf="empphnumber.errors['pattern']" class="container__error__msg">Enter the valid Phone
+                        Number</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="empemail">Email address</label>
+                <input type="email" class="form-control" id="empemail" placeholder="empemail for leave" name="empemail"
+                    required [(ngModel)]="EmpregForm.empemail" #empemail="ngModel" [pattern]="emailPattern">
+                <div *ngIf="empemail.errors && empemail.touched">
+                    <small *ngIf="empemail.errors['required']" class="container__error__msg">Enter the email</small>
+                    <small *ngIf="empemail.errors['pattern']" class="container__error__msg">Enter the valid
+                        email</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="emppassword">Password</label>
+                <input type="password" class="form-control" id="emppassword" placeholder="Enter the Password"
+                    name="emppassword" required [(ngModel)]="EmpregForm.emppassword" #emppassword="ngModel"
+                    [pattern]="passwordPtn" minlength="6">
+                <div *ngIf="emppassword.errors && emppassword.touched">
+                    <small *ngIf="emppassword.errors['required']" class="container__error__msg">Enter the
+                        Password</small>
+                    <small *ngIf="emppassword.errors['minlength']" class="container__error__msg">characters should be
+                        more than
+                        8</small>
+                    <small *ngIf="emppassword.errors['pattern']" class="container__error__msg">Password requires[capital
+                        letter, alphabets,
+                        number, special symbols]</small>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary container__form__submitbtn">Submit</button>
+        </form>
+    </div>
+</div>

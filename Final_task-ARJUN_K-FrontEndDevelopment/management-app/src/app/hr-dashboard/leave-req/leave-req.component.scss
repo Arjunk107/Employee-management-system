@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Inconsolata:wght@300&family=Inter:wght@200&family=Poppins:wght@300&family=Roboto&family=Share+Tech+Mono&display=swap');
+
+.leavecards {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+
+    &__cardbody {
+        display: flex;
+        justify-content: space-between;
+
+        &__h5 {
+            font-size: 19px;
+            font-weight: 900;
+
+        }
+    }
+
+    &__dates {
+        font-size: 17px;
+        font-weight: 600;
+    }
+}

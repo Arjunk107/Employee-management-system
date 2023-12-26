@@ -1,0 +1,33 @@
+.container {
+    width: 80%;
+    height: 500px;
+
+    &__container-forms {
+        box-shadow:
+            1px 2px 2px hsl(220deg 60% 50% / 0.2),
+            2px 4px 4px hsl(220deg 60% 50% / 0.2),
+            4px 8px 8px hsl(220deg 60% 50% / 0.2);
+        height: 550px;
+        padding: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        &__dobs {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__submitbtn {
+            width: 10%;
+        }
+    }
+
+    &__error__msg {
+        color: red;
+    }
+}
